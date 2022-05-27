@@ -5,7 +5,7 @@ var baseURL;
 // if (process.env.REACT_APP_ENVIRONMENT && process.env.REACT_APP_ENVIRONMENT === 'PRODUCTION') {
 //     baseURL = process.env.REACT_APP_API_BASE_URL;
 // } else {
-baseURL = 'https://backend-jheru.herokuapp.com/';
+baseURL = 'https://backend-cinemagd.herokuapp.com/';
 // }
 
 const api = axios.create({
