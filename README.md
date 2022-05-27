@@ -24,7 +24,7 @@ Check out [API LIVE DEMO](https://backend-cinemagd.herokuapp.com/) here!!
 1. Git Clone
 
 ```
-git clone git@github.com:Tech-i-s/techis-wd-forum-django-react.git
+git clone
 ```
 
 2. Backend setting
