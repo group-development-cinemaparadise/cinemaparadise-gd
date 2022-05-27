@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import IconLogo from '../../assets/img/icon-logo.svg';
-import IconSearch from '../../assets/img/icon-search.svg';
 import { push } from 'connected-react-router';
 
 function Header() {
@@ -14,7 +13,7 @@ function Header() {
                 <div class="side-head">
                     <div class="search">
                         <input type="text" />
-                        <img src={IconSearch} alt="" />
+                        
                     </div>
                     <div class="option">
                         <p onClick={() => dispatch(push('/categories'))}>Category</p>
