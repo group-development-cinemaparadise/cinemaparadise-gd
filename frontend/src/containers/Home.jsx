@@ -28,7 +28,6 @@ const Home = () => {
         setSelectedMovieId(movieId);
         setShowPreview(true);
     };
-    const [showLike, setShowLike] = useState(null);
     
     useEffect(() => {
         dispatch(fetchFromLocalStorage);
@@ -73,12 +72,8 @@ const Home = () => {
                                                 <img
                                                     class="fav"
                                                     onClick={() => {
-                                                        setSHowLike(!showLike);
-                                                    if (showLike) {
                                                         clickfav(movie);
-                                                    } 
                                                     }}
-                                                    style={{ backgroundColor: ShowLike ? "white" : "red" }}
                                                     src={IconFav}
                                                     alt=""
                                                 />
