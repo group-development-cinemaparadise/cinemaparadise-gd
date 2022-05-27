@@ -2,11 +2,11 @@ import axios from 'axios';
 const LOGIN_USER_KEY = 'WD_FORUM_LOGIN_USER_KEY';
 
 var baseURL;
-if (process.env.REACT_APP_ENVIRONMENT && process.env.REACT_APP_ENVIRONMENT === 'PRODUCTION') {
-    baseURL = process.env.REACT_APP_API_BASE_URL;
-} else {
-    baseURL = 'http://127.0.0.1:8000';
-}
+// if (process.env.REACT_APP_ENVIRONMENT && process.env.REACT_APP_ENVIRONMENT === 'PRODUCTION') {
+//     baseURL = process.env.REACT_APP_API_BASE_URL;
+// } else {
+baseURL = 'https://backend-jheru.herokuapp.com/';
+// }
 
 const api = axios.create({
     baseURL: baseURL,
@@ -62,5 +62,41 @@ export default class API {
         return api.delete(`/posts/delete/${id}/`).catch(error => {
             throw new Error(error);
         });
+    };
+
+    getMovies = async params => {
+        let url = '/movies/';
+        let query = new URLSearchParams();
+        for (const key in params) {
+            if (params[key] != null) {
+                query.append(key, params[key]);
+            }
+        }
+
+        if (query.toString() !== '') {
+            url += '?' + query.toString();
+        }
+        const places = await api
+            .get(url)
+            .then(response => {
+                console.log(response.data);
+                return response.data;
+            })
+            .catch(error => {
+                throw new Error(error);
+            });
+        return places;
+    };
+
+    getMovie = async id => {
+        const movies = await api
+            .get('/movies/' + id + '/')
+            .then(response => {
+                return response.data;
+            })
+            .catch(error => {
+                throw new Error(error);
+            });
+        return movies;
     };
 }
