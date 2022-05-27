@@ -28,7 +28,8 @@ const Home = () => {
         setSelectedMovieId(movieId);
         setShowPreview(true);
     };
-
+    const [showLike, setShowLike] = useState(null);
+    
     useEffect(() => {
         dispatch(fetchFromLocalStorage);
         api.getMovies({ release_type: 'Coming Soon' })
@@ -72,8 +73,12 @@ const Home = () => {
                                                 <img
                                                     class="fav"
                                                     onClick={() => {
+                                                        setSHowLike(!showLike);
+                                                    if (showLike) {
                                                         clickfav(movie);
+                                                    } 
                                                     }}
+                                                    style={{ backgroundColor: ShowLike ? "white" : "red" }}
                                                     src={IconFav}
                                                     alt=""
                                                 />
