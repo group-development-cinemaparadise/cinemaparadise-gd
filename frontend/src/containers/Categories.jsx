@@ -117,7 +117,7 @@ const Categories = () => {
                     <div class="left">
                         <div class="newly-rel">
                             <hr />
-                            <h2>Comedy</h2>
+                            <h2>Romance</h2>
                             <hr />
                         </div>
                     </div>
