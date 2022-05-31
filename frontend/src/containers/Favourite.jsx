@@ -55,7 +55,7 @@ function Favourite() {
                                     </div>
                                     <h1>{favourite.name}</h1>
                                     <p>TV-MA | Action, Crime</p>
-                                    <button>Watch Trailer</button>
+                                    <a href={favourite.trailer_link} target="_blank"><button>Watch Trailer</button></a>
                                 </li>
                             ))
                         ) : (
