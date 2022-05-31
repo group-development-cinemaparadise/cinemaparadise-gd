@@ -87,7 +87,8 @@ const Home = () => {
                                     </div>
                                     <h1>{movie.name}</h1>
                                     <p>TV-MA | Action, Crime</p>
-                                    <button>Watch Trailer</button>
+                                    <a href={movie.trailer_link} target="_blank"><button>Watch Trailer</button></a>
+
                                 </li>
                             ))
                         ) : (
@@ -132,7 +133,8 @@ const Home = () => {
                                     </div>
                                     <h1>{movie.name}</h1>
                                     <p>TV-MA | Action, Crime</p>
-                                    <button>Watch Trailer</button>
+                                    <a href={movie.trailer_link} target="_blank"><button>Watch Trailer</button></a>
+
                                 </li>
                             ))
                         ) : (
