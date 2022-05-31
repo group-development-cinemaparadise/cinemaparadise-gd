@@ -46,14 +46,7 @@ const Preview = ({ setShowPreview, selectedMovieId }) => {
                                     <button>Thriller</button>
                                 </div>
                                 <p>{movie.description}</p>
-                                <button class="preview-play">
-                                    Play Now{' '}
-                                    <img
-                                        onClick={() => dispatch(push('{movie.trailer_link}'))}
-                                        src="../img/icon-play.png"
-                                        alt=""
-                                    />
-                                </button>
+                                <a href={movie.trailer_link} target="_blank"><button class="preview-play">Watch Trailer</button></a>
                             </div>
                         </div>
                     </div>
