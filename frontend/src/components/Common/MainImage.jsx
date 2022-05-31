@@ -26,7 +26,7 @@ function MainImage() {
                         <br />
                         joins the travellers on their perilous quest.
                     </p>
-                    <button>Watch Now</button>
+                    <button href="https://www.youtube.com/watch?v=lr_spVswTUo&vl=en" target="_blank">Watch Now</button>
                 </div>
             </div>
         </>
