@@ -1,7 +1,7 @@
-# Forum App in React & Redux + Django
+# Cinema Paradiso in React & Redux + Django
 
 ```
-Forum App, with a frontend built in React & Redux and a backend built in Django API.
+Cinema Paradiso, with a frontend built in React & Redux and a backend built in Django API.
 ```
 
 ## Live Demo
